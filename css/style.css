@@ -1,0 +1,251 @@
+/*Import das fontes externas*/
+@font-face{
+    font-family: roboto;
+    src: url(font/Roboto-Bold.ttf);
+}
+
+@font-face{
+    font-family: russo;
+    src: url(font/Russo_One.ttf)
+}
+
+/*seletor Universal (oq coloca dentro do asteristico zera tudo dos elementos)*/
+*{
+    /*zerar a margem de todos os elementos do html*/
+    margin: 0;
+    /*zera os espaços internos de todos os elementos*/
+    padding: 0;
+    /*permiti que os elementos do html nn sofram alterações ao ajustar o padding*/
+    box-sizing: border-box;
+}
+
+/*Escopo global do CSS*/
+.content{
+    width: 1600px;
+    /*Altura minima da caixa*/
+    min-height: 50px;
+    /*altura automatica conforme a quantidade de conteúdo*/
+    height: auto;
+    /*serve para eliminar possivel barra de rolagem no estouro da caixa*/
+    overflow: hidden;
+
+    /*serve para centralizar qualquer elemento html*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Seção do cabeçalho e menu do site*/
+header{
+    width: 100%;
+    height: 105px;
+    background-color: #D30529;
+    padding-top: 20px;
+}
+
+nav{
+    width: 500px;
+    height: 70px;
+    margin-left: auto;
+}
+
+nav ul{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+}
+
+nav ul li{
+    /*permite definir o tipo de marcador da lista*/
+    list-style: none;
+    width: 50%;
+    /*permite alinhar objetos na horizontal (lado a lado)*/
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.menu-text{
+    font-family: roboto;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.2em;
+
+}
+
+/*Main (principal)*/
+main{
+    width: 100%;
+    min-height: 1000px;
+    height: auto;
+    overflow: hidden;
+}
+
+/*Seções de conteúdo do site*/
+/*Section Basquete*/
+#basquete{
+    width: 100%;
+    height: 850px;
+    background-color: #000000;
+    min-height: 850px;
+    height: auto;
+    overflow: hidden;
+}
+
+#basquete h2{
+    height: 100px;
+    font-family: russo;
+    font-size: 3em;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#basquete-texto{
+    width: 35%;
+    min-height: 50px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
+#basquete-texto > p{
+    font-family: roboto;
+    font-size: 1.4em;
+    margin-bottom: 80px;
+    line-height: 1.5em;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #7f7a7a;
+}
+
+#basquete-logo{
+    width: 30%;
+    height: 500px;
+    /*permite colocar uma imagem de fundo*/
+    background-image: url(../css/img/nba.png);
+    /*Permite ajustar o tamanho da imagem*/
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#basquete-lendas{
+    width: 35%;
+    height: 500px;
+    float: left;
+    min-height: 500px;
+    height: auto;
+    overflow: hidden;
+}
+
+#basquete-lendas h3{
+    font-family: roboto;
+    font-size: 1.5em;
+    color: #ffffff;
+    letter-spacing: 0.5em;
+    margin-bottom: 20px;
+}
+
+/*Aplicar a mesma estilização nos dois elementos (Figure e IMG)*/
+#basquete-lendas figure, #basquete figure img{
+    width: 300px;
+    height: 200px;
+    /*arredonda as bordas*/
+    border-radius: 30%;
+}
+
+#basquete-lendas figure{
+    margin-bottom: 80px;
+}
+
+#basquete-lendas figure figcaption{
+    text-align: center;
+    font-family: roboto;
+    font-size: 0.8em;
+    color: #eedede;
+}
+
+/*Section imagem de fundo Jordan*/
+#jordan{
+    width: 100%;
+    height: 800px;
+
+    /*Coloca a imagem de fundo*/
+    background-image: url(../css/img/michael-jordan-Autografo.jpg);
+
+    /*Permite posicionar a imagem de fundo em alinhamento horizontal(left, center, rigth) e vertical (top, center, bottom)*/
+    background-position: top;
+
+    /*Permite ajustar a forma com que a imagem de fundo irá se repetir (no repeat) não haverá repetição*/
+    background-repeat: no-repeat;
+
+    /*permite ajustar o tamanho da imagem em (px, %, cover, contain)*/
+    background-size: cover;
+
+    /*permite fixar a imagem para faze4r um efeito de rolagem*/
+    background-attachment: fixed;
+    
+}
+
+/*Adicionando a virgula podemos compartilhar a mesma estilização com elementos diferentes*/
+#jordan > .content > h2, #lebron > .content > h2{
+    font-family: russo;
+    font-size: 3em;
+    color:#ffffff;
+    letter-spacing: 0.6em;
+    height: 100px;
+    padding-top: 20px;
+}
+
+#jordan > .coontent > h2 > span, #lebron > .content > h2 > span {
+    /*Permite colocar o texto em maisúsculo (minusculo tbm)*/
+    text-transform: uppercase;
+}
+
+/*Seção de equipes de basquete*/
+#equipes{
+    width: 100%;
+    height: 1000px;
+    color: #151414;
+}
+
+#caixa-equipes{
+    /*Inherit serve para herdar um valor do elemento pai*/
+    width: inherit;
+    min-height: 100px;
+    height: auto;
+    overflow: hidden;
+    background-color: #D30529;
+    /*Permite ativar a utilização do flex*/
+    display: flex;
+    /*Permite forçar ou não a quebra de linha para os elementos*/
+    flex-wrap: wrap;
+    /*Permite ajustar se os elementos serão colocados em linhas ou colunas*/
+    flex-direction: row;
+    /*Cria espaçamento entre os elementos*/
+    justify-content: space-between;
+}
+
+.card-equipes{
+    width: 450px;
+    height: 600px;
+    background-color: aqua;
+}
+
+#lebron{
+    width: 100%;
+    height: 800px;
+    background-image: url(../css/img/T3nbuc.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*permite fixar a imagem para faze4r um efeito de rolagem*/
+    background-attachment: fixed;
+}
