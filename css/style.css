@@ -1,0 +1,246 @@
+@font-face{
+    font-family: roboto;
+    src: url(font/Roboto-Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #FFF;
+    font-family: roboto, sans-serif;
+    justify-content: center;
+}
+
+.content{
+    width: 1600px;
+    min-height: 50px;
+    height: auto;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+nav{
+    width: auto;
+    height: 70px;
+    display: flex;
+    flex-direction: row-reverse;
+    float: right;
+}
+
+nav ul{
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul li{
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 200px;
+    margin-right: 10px;
+    float: left;
+    text-align: center;
+    padding-top: 30px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.selected{
+    background-color: #F5C617;
+    color: #000;
+}
+
+.menu-text{
+    font-family: roboto;
+    font-size: 1.5em;
+    color: #FFF;
+    text-align: center;
+    letter-spacing: 0.2em;
+
+}
+
+main{
+    width: 100%;
+    min-height: 1000px;
+    height: auto;
+    overflow: hidden;
+}
+
+h2{
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+.imagem-principal{
+    width: 100%;
+    min-height: 900px;
+    max-height: auto;
+    background-image: url(../imagens/header-fundo.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.texto{
+    padding: 1em;
+    font-size: 3em;
+    color: #FFF;
+}
+
+.texto p{
+    text-align: justify;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 50px;
+}
+
+.imagem-sinopse-fim{
+    position: relative;
+    width: 100%;
+    min-height: 1350px;
+    background-image: url(../imagens/imagem-end.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 1em;
+}
+
+.imagem-sinopse-fim::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 198, 23, 0.3);
+}
+
+#personagens{
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #FFF;
+}
+
+.personagem {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+.personagem img {
+    width: 50%; 
+    margin-right: 1em;
+}
+
+.personagem-nome {
+    margin-left: 50px;
+    margin-bottom: 0.5em;
+    color: #F5C617;
+    letter-spacing: 0.4em;
+}
+
+#familia-winchester{
+    position: relative;
+    width: 100%;
+    min-height: 1350px;
+    background-image: url(../imagens/familia-winchester.jpeg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+#familia-winchester::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#familia-winchester h3{
+    font-size: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F5C617;
+    letter-spacing: 0.3em;
+    text-align: center;
+    z-index: 2;
+    background-color: transparent;
+}
+
+#temporadas h2{
+    font-family: roboto, sans-serif;
+    margin-left: 1em;
+    font-size: 4em;
+    color: #FFF;
+}
+
+#temporadas-lista{
+    justify-content: center;
+    justify-items: center;    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 100px;
+}
+
+.temporadas-card{
+    width: 70%;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.temporadas-card img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.temporadas-card h3{
+    color: #F5C617;
+    font-size: 3em;
+}
+
+#curiosidades-imagem{
+    position: relative;
+    width: 100%;
+    min-height: 1350px;
+    background-image: url(../imagens/Supernatural.webp);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 1em;
+}
+
+.imagem-rodape{
+    width: 700px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagem-rodape img{
+    height: 100%;
+}
